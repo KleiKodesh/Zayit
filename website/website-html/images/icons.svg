@@ -127,8 +127,20 @@
     <polyline points="12,19 5,12 12,5"/>
   </symbol>
 
+  <!-- Arrow Right Icon -->
+  <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"/>
+    <polyline points="12,5 19,12 12,19"/>
+  </symbol>
+
   <!-- Chevron Down Icon -->
   <symbol id="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="6,9 12,15 18,9"/>
+  </symbol>
+
+  <!-- Close Icon -->
+  <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
   </symbol>
 </svg>

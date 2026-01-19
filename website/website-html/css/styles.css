@@ -1165,6 +1165,19 @@ body {
     line-height: 1.6;
 }
 
+/* Responsive Feature Grid */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Download Section */
 .download-section {
     background: linear-gradient(180deg, rgba(139, 115, 85, 0.08) 0%, rgba(139, 115, 85, 0.02) 100%);
@@ -2184,27 +2197,33 @@ body {
 
 .lightbox-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(8px);
+    z-index: 1001;
+}
+
+.lightbox-close .icon {
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(50, 50, 50, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 /* Make images clickable */
@@ -2224,5 +2243,63 @@ body {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 2rem;
+    }
+}
+/* Lightbox Navigation */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(8px);
+    z-index: 1001;
+}
+
+.lightbox-prev .icon,
+.lightbox-next .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.lightbox-prev {
+    left: 2rem;
+}
+
+.lightbox-next {
+    right: 2rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(50, 50, 50, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* On smaller screens, make buttons smaller */
+@media (max-width: 768px) {
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.5rem;
+    }
+    .lightbox-prev {
+        left: 0.5rem;
+    }
+    .lightbox-next {
+        right: 0.5rem;
     }
 }
